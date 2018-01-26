@@ -1,0 +1,15 @@
+footer {
+position: absolute;
+bottom:0;
+width: 100%;
+background-color: grey;
+color: white;
+text-align: left;
+height: 20%;
+}
+
+h1 {
+text-align: left;
+Color: black;
+Font-family: Georgia
+}
