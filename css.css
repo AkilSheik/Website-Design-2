@@ -2,7 +2,7 @@ footer {
 position: absolute;
 bottom:0;
 width: 100%;
-background-color: grey;
+background-color: black;
 color: white;
 text-align: left;
 height: 20%;
@@ -11,5 +11,30 @@ height: 20%;
 h1 {
 text-align: left;
 Color: black;
-Font-family: Georgia
+Font-family: Bookman;
+}
+
+body {
+background-image: url("")
+height: 100%;
+width: 100%;
+color: white;
+} 
+.button {
+position: auto;
+width: 10%;
+height: 20%;
+color: black;
+text-align: center;
+font-weight: bold;
+background-color: transparent;
+border-style: solid;
+border-color: black;
+font-family: Bookman;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 100px;
+padding-right: 100px;
+font-size: 23px;
+float: left;
 }
