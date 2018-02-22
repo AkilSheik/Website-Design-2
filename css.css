@@ -68,13 +68,14 @@ padding-right: 2.5%
 bottom: -85px;
 }
 .sidenav {
-position: absolute;
-height: 100%;
+position: fixed;
+height: 87.5%;
 width: 20%;
 overflow-x: hidden;
-overflow-y: scroll;
+overflow-y: hidden;
 left: 0;
-
+margin-top: 5%;
+background-color: yellow;
 
 }
 .sidenav a {
@@ -84,6 +85,7 @@ padding-top: 10px;
 padding-bottom: 10px;
 color: black;
 display: block;
+border-style: solid;
 }
 sidnav a:hover {
 color: green;
@@ -92,3 +94,4 @@ color: green;
 margin-left: 20%;
 padding: 0px 10px;
 }
+
