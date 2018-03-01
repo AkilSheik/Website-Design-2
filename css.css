@@ -1,18 +1,19 @@
 footer {
 position: absolute;
-bottom:0;
+bottom: 0;
 width: 100%;
 background-color: black;
 color: white;
 text-align: left;
-height: 10%;
-transition: bottom 0.2s ease-in-out;
+height: 20%;
 }
 
 h1 {
 text-align: left;
 Color: white;
 Font-family: Bookman;
+font-size: 35px;
+text-decoration: underline;
 }
 
 body {
@@ -42,7 +43,7 @@ float: left;
 display: block;
 color: white;
 font-family: Bookman;
-font-size: 30px;
+font-size: 25px;
 padding-top: 15px;
 padding-bottom: 50px;
 display: inline;
@@ -65,18 +66,17 @@ li:last-child {
 padding-right: 2.5%
 }
 .nav-down {
-bottom: -85px;
+bottom: -170px;
 }
 .sidenav {
-position: fixed;
+position: sticky;
 height: 87.5%;
 width: 20%;
 overflow-x: hidden;
 overflow-y: hidden;
 left: 0;
-margin-top: 5%;
 background-color: yellow;
-
+margin-top: -16.5%;
 }
 .sidenav a {
 padding-left: 10px;
@@ -86,12 +86,29 @@ padding-bottom: 10px;
 color: black;
 display: block;
 border-style: solid;
+font-size: 25px;
 }
 sidnav a:hover {
 color: green;
 }
 .main {
 margin-left: 20%;
+margin-top: 20%;
 padding: 0px 10px;
+position: relative;
+overflow: auto;
 }
+.active {
+background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
 
