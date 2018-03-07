@@ -141,7 +141,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
    # STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
     #STATICFILES_DIRS=[
     #os.path.join(BASE_DIR,'Website_design/assets')
-      ]
+      #]
 
       
 
