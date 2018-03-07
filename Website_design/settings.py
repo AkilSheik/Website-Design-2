@@ -56,7 +56,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ["templates/Website_Design",
-                 os.path.join(BASE_DIR,'Website_design'),
+                 os.path.join(BASE_DIR,'Website_design')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
