@@ -134,7 +134,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 
     #Allow only Heroku to host the project
-    ALLOWED_HOSTS = ['Website-design.herokuapp.com']
+    ALLOWED_HOSTS = ['zypher-computing.herokuapp.com']
     DEBUG=False
     #Static asset configuration
     #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
