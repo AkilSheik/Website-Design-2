@@ -7,6 +7,5 @@ def index(request):
 def about(request):
     return render(request, 'Website_Design/about.html')
 
-def 500(request):
-    return render(request(request,os.path.join(BASE_DIR, 'Website_Design/500.html'))
+
 
