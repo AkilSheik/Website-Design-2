@@ -25,7 +25,7 @@ SECRET_KEY = '#!tjvx!a5@ig1f5fqsox-1f_)qk1o*&mvtb^ytw_e9ac#1mgr6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Website_Design',
+   # 'users',
 ]
 
 MIDDLEWARE = [
@@ -125,7 +126,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
 STATICFILES_DIRS=[
 os.path.join(BASE_DIR,'Website_design/assets')
-]
+      ]
 if cwd == '/app' or cwd[:4] == '/tmp':
     import dj_database_url
     DATABASES = {
@@ -138,11 +139,11 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     ALLOWED_HOSTS = ['zypher-computing.herokuapp.com']
     DEBUG=False
     #Static asset configuration
-    #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-   # STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
-    #STATICFILES_DIRS=[
-    #os.path.join(BASE_DIR,'Website_design/assets')
-      #]
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
+    STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'Website_design/assets')
+      ]
 
       
 

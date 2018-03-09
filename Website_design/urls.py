@@ -19,9 +19,11 @@ from django.conf.urls import include,url
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-app_name="Website_Design"
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    url(r'',include('Website_Design.urls')),
+     path('admin/', admin.site.urls),
+   # url(r'^users/', include('users.urls')),
+     url(r'',include(('Website_Design.urls','Website_Design'), namespace='Website_Design')),   
 ]
+
 urlpatterns += staticfiles_urlpatterns()
