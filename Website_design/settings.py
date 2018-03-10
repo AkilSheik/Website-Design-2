@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#!tjvx!a5@ig1f5fqsox-1f_)qk1o*&mvtb^ytw_e9ac#1mgr6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -138,7 +138,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Allow only Heroku to host the project
     ALLOWED_HOSTS = ['zypher-computing.herokuapp.com']
 
-    DEBUG=False
+    DEBUG=True
 
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
