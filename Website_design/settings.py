@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#!tjvx!a5@ig1f5fqsox-1f_)qk1o*&mvtb^ytw_e9ac#1mgr6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Website_Design',
-   # 'users',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -118,7 +118,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
+ #https://docs.djangoproject.com/en/2.0/howto/static-files/
 #Heroku settings
 STATIC_URL = '/static/'
 cwd = os.getcwd()
@@ -132,13 +132,13 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     DATABASES = {
         'default' : dj_database_url.config(default='postgres://localhost')
         }
-    #Honor the 'X-Forwarded-Proto' header for request.is_secure()
+ #   Honor the 'X-Forwarded-Proto' header for request.is_secure()
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 
-    #Allow only Heroku to host the project
+   # Allow only Heroku to host the project
     ALLOWED_HOSTS = ['zypher-computing.herokuapp.com']
     DEBUG=False
-    #Static asset configuration
+  #  Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
     STATICFILES_DIRS=[

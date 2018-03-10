@@ -6,6 +6,7 @@ def index(request):
     return render(request, 'Website_Design/index.html')
 def about(request):
     return render(request, 'Website_Design/about.html')
-
+def Sources(request):
+    return render(request, 'Website_Design/Sources.html')
 
 
