@@ -137,7 +137,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
 
    # Allow only Heroku to host the project
     ALLOWED_HOSTS = ['zypher-computing.herokuapp.com']
-    DEBUG=False
+    DEBUG=True
   #  Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
