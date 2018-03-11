@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#!tjvx!a5@ig1f5fqsox-1f_)qk1o*&mvtb^ytw_e9ac#1mgr6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =  False
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -122,7 +122,7 @@ USE_TZ = True
 #Heroku settings
 STATIC_URL = '/static/'
 cwd = os.getcwd()
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT=os.path.join(BASE_DIR,'Website_design/staticfiles')
 STATICFILES_DIRS=[
 os.path.join(BASE_DIR,'Website_design/assets')
@@ -138,7 +138,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     # Allow only Heroku to host the project
     ALLOWED_HOSTS = ['zypher-computing.herokuapp.com']
 
-    DEBUG=True
+    DEBUG=False
 
     #Static asset configuration
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
