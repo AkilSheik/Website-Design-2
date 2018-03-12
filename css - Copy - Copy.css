@@ -1,8 +1,8 @@
 footer {
 position: absolute;
-bottom: 0;
+bottom: -1%;
 left: 0;
-width: 101%;
+width: 103%;
 background-color: #79919D;
 color: white;
 text-align: left;
@@ -20,7 +20,7 @@ font-size: 35px;
 
 body {
 height: 100%;
-width: 100%;
+width: 94%;
 color: white;
 } 
 .topnav {
@@ -101,10 +101,10 @@ overflow: auto;
 .active {
 background-color: transparent;
 }
-.topleft {
+.center {
 position: absolute;
 top: 25%;
-left: 3%;
+left: 25%;
 font-size: 40px;
 }
 #2 {
@@ -136,6 +136,11 @@ padding-top: 15px;
 padding-bottom: 50px;
 margin-left: 20px;
 }
+
+
+
+
+
 
 
 
