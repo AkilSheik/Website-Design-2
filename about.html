@@ -5,6 +5,7 @@
 type = "text/css" 
 href = "css - Copy - Copy.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
+<title>About</title>
 <style>
 .sidenav a:nth-child(2) {
 background-color: white;
@@ -14,12 +15,13 @@ img {
 }
 ul {
 background-color: #7c9dad;
+z-index: 1000;
 }
 body {
 background-image: url("img_0630.jpg");
 background-size: cover;
-background-repeat: no-repeat;
-position: static;
+background-repeat: no-repeat
+position: relative;
 }
 </style>
 </head>
@@ -44,7 +46,7 @@ function myFunction() {
 }
 </script>
 </div>
-<main>
+<main style="position: relative; width: 96%; height: 100%;">
 <h1 style= "margin-left:25%; margin-top:8%; font-size: 49px; text-decoration: underline;">Our Mission</h1>
 <p style= "margin-left:25%; margin-top: 1%; font-size: 25px;">As technology continues to evolve, there shall require an 
 increasing number of ways to instruct the people about the rapidly changing technology. 
@@ -53,14 +55,15 @@ increasing number of ways to instruct the people about the rapidly changing tech
 we hope to be able to provide a simple, easy, and informative learning experience.</p>
 </main>
 <div class="sidenav">
-<a class= "active" href="about.html">Our Mission</a>
-<a href="Sources.html">Sources</a>
-
+<a href="about.html">Our Mission</a>
+<a class= "active" href="Sources.html">Sources</a>
 </div>
-<div><footer class="nav-down" position:"fixed"; margin-left:"25%";>
+<div>
+<footer class="nav-down">
 <h1>Contact Us</h1>
 <p>Raymond.moy@lps-students.org</p>
-</footer></div>
+</footer>
+</div>
 
 
 </body>
