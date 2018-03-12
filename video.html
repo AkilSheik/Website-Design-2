@@ -1,9 +1,81 @@
 <!doctype html>
 <html>
 <head>
-
+<link rel="stylesheet" 
+type = "text/css" 
+href = "css - Copy - Copy.css" />
+<meta name="viewport" content="width=device-width">
+<title>video</title>
+<style>
+.sidenav a:nth-child(2) {
+background-color: white;
+}
+.sidenav a:nth-child(3) {
+background-color: white;
+}
+.sidenav a:nth-child(4) {
+background-color: white;
+}
+.sidenav a:nth-child(5) {
+background-color: white;
+}
+img {
+    max-width: 100%;
+}
+ul {
+background-color: #7c9dad;
+}
+body {
+background-image: url("img_0630.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+}
+</style>
 </head>
 <body>
+<div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
+<img src= "unnamed.png" style="float:left; width: 5%; margin-left: 2%;">
+<a href="index - Copy.html" class= "button" width: 9%>Home</a>
+<a href="video.html" class= "button" width: 9%>Video</a>
+<a href="text.html" class= "button" width: 9%>Text</a>
+<a href="Cloud.html" class= "button" width: 9%>Cloud</a>
+<a class="button" style="float:right" href= "about.html" width: 9%>About</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</div>
+<main style="position: relative; width: 100%; height: 100%;">
+<h1 style= "margin-left:25%; margin-top:8%; font-size: 49px; text-decoration: underline;">What is Cloud Computing?</h1>
+
+<video style= "margin-left:25%; margin-top: 1%;" width="500" height: "500" controls>
+<source src="test.mp4" type="video/mp4">
+</video>
+
+</main>
+<div class="sidenav">
+<a href="video.html">What is Cloud Computing?</a>
+<a href="How can you get it.html">How Can You Get It?</a>
+<a href="Uses.html">Uses</a>
+<a href="Pros.html">Pros</a>
+<a href="Cons.html">Cons</a>
+</div>
+<div>
+<footer class="nav-down" style="position: absolute; bottom:-1%">
+<h1>Contact Us</h1>
+<p>Raymond.moy@lps-students.org</p>
+</footer>
+</div>
+
 
 </body>
 </html>
