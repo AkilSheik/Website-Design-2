@@ -5,7 +5,7 @@
 type = "text/css" 
 href = "css - Copy - Copy.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
-<title>Home</title>
+<title>Zephyr - Home</title>
 <style>
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -16,20 +16,11 @@ href = "css - Copy - Copy.css" />
 }
 @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
-  .topnav.responsive a.icon {
+  .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-@media screen and (max-width: 600px) {
-.topnav:last-child {
-float: none; 
-}
-main {
-margin-top: 10%;
-height: 200%;
-}
-}
   .topnav.responsive a {
     float: none;
     display: block;
@@ -54,13 +45,13 @@ position: absolute;
 <body>
 <div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
 <img src= "unnamed.png" style="float:left; width: 5%; margin-left: 2%;">
-<a href="index - Copy.html" class= "button" width: 9%>Home</a>
+<a href="index - Copy.html" class= "active" width: 9%>Home</a>
 <a href="video.html" class= "button" width: 9%>Video</a>
 <a href="text.html" class= "button" width: 9%>Text</a>
 <a href="Cloud.html" class= "button" width: 9%>Cloud</a>
 <a class="button" style="float:right" href= "about.html" width: 9%>About</a>
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
+</div>
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -71,19 +62,16 @@ function myFunction() {
     }
 }
 </script>
-</div>
 <main style="position: relative; width: 94%; height: 100%;">
-<div id="animation">
 <h1 style= "margin-left:12%; margin-top:10%; font-size: 49px; text-align: center;">Teach Yourself About the Cloud Here at Zephyr Computing.</h1>
 <h1 style= "margin-left:12%; margin-top:8%; font-size: 30px; text-align: center;">"Learn, Grow, Rise, and Store" -Zephyr Computing Team</h1>
+<a href="register.html" class="button" style="position: absolute; background-color: transparent;  left:47%; padding: 3% 5% 3% 5%; font-size: 24px; border:solid; border-color: black; color: black;">Sign Up</a>
 </main>
-<div>
 <footer class="nav-down" position:"fixed"; margin-left:"25%";>
 <h1>Contact Us</h1>
 <p>Raymond.moy@lps-students.org</p>
 </footer>
 </div>
-
 
 </body>
 </html>
