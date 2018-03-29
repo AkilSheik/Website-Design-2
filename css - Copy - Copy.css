@@ -16,6 +16,7 @@ text-align: left;
 Color: white;
 Font-family: Bookman;
 font-size: 35px;
+z-index: 1;
 }
 
 body {
@@ -63,7 +64,7 @@ color: white;
 padding-right: 2.5%
 }
 .nav-down {
-bottom: -170px;
+bottom: -175px;
 }
 .sidenav {
 position: relative;
@@ -134,3 +135,8 @@ padding-top: 15px;
 padding-bottom: 50px;
 margin-left: 20px;
 }
+
+
+
+
+
