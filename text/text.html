@@ -5,45 +5,144 @@
 type = "text/css" 
 href = "css - Copy - Copy.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
-<title>text</title>
+<title>Zephyr - About</title>
 <style>
 .sidenav a:nth-child(2) {
-background-color: white;
-}
-.sidenav a:nth-child(3) {
 background-color: white;
 }
 .sidenav a:nth-child(4) {
 background-color: white;
 }
+.sidenav a:nth-child(3) {
+background-color: white;
+}
 .sidenav a:nth-child(5) {
 background-color: white;
+}
+@media screen and (max-width: 803px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 803px) {
+  .topnav.responsive {
+position: relative;
+padding-bottom: 17%;
+padding-right: 5%;
+margin-top: -2%;
+margin-left: -2% !important;
+}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin-left: -0.5%;
+   padding-left: 2%;
+  }
+}
+@media screen and (max-width: 803px) {
+.button {
+float-right: none;
+left: 39% !important;
+  }
+footer {
+margin-left: -2%;
+  }
+main {
+margin-top: 20%; 
+  }
+.topnav a:nth-child(6) {
+float: none !important;
+  }
+.topnav a {
+border-bottom: 1px;
+border-top: 0;
+border-left: 0;
+border-right: 0;
+border-color: black;
+border-style: solid;
+padding-right: 100%;
+  }
+.topnav a:nth-child(7) {
+border-bottom: 0;
+  }
+img {
+width: 110% !important;
+  }
+.topnav a:nth-child(1) {
+border-bottom: none !important;
+padding-right: 50px;
+  }
+.topnav a:nth-child(2) {
+border-top: 1px;
+border-left: none !important;
+border-right: none !important;
+border-style: solid;
+border-color: black;
+margin-left: 1% !important;
+padding-left: 1%;
+  }
+.topnav {
+margin-left: -2% !important;
+  }
+footer {
+bottom: -350px !important;
+padding-bottom: 3.5% !important;
+margin-top: 2%;
+  }
+.sidenav a {
+text-align: center;
+font-size: 15px !important;
+  }
+.sidenav {
+margin-top: -70% !important;
+position: absolute;
+  }
+main {
+margin-top: 17% !important;
+  }
+}
+html { 
+ background: url("img_0630.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+height: 75%;
 }
 img {
     max-width: 100%;
 }
 ul {
 background-color: #7c9dad;
+z-index: 1000;
 }
 body {
-background-image: url("img_0630.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-position: relative;
-width: 95%;
+position: absolute;
+z-index: 1;
 }
+
 </style>
 </head>
 <body>
 <div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
-<img src= "unnamed.png" style="float:left; width: 5%; margin-left: 2%;">
-<a href="index - Copy.html" class= "button" width: 9%>Home</a>
+<a href="index - Copy.html">
+<img src= "unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
+</a>
+<a href="index - Copy.html" class= "active" style="width: 9%; margin-left: -3%;">Home</a>
 <a href="video.html" class= "button" width: 9%>Video</a>
 <a href="text.html" class= "button" width: 9%>Text</a>
 <a href="Cloud.html" class= "button" width: 9%>Cloud</a>
-<a class="button" style="float:right" href= "about.html" width: 9%>About</a>
-<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
+<a class="button" style="float:right;" href= "about.html" width: 9%>About</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-left: -1%;">&#9776;</a>
+</div>
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -55,21 +154,21 @@ function myFunction() {
 }
 </script>
 </div>
-<main style="position: relative; width: 100%; height: 100%;">
-<h1 style= "margin-left:25%; margin-top:8%; font-size: 49px; text-decoration: underline;">What is Cloud Computing?</h1>
+<main style="position: absolute; width: 100%; height: 100%;">
+<h1 style= "margin-left:25%; margin-top:10%; font-size: 49px; text-decoration: underline;">What is Cloud Computing?</h1>
 <p style= "margin-left:25%; margin-top: 1%; font-size: 25px;">Cloud Computing, is simply using another computer over your internet to store and use data. So, instead of using your own computer
 and having your data stuck on one network, you get the benefit of having it be on a remote server. This means that you can access your data or applications virtually anywhere, as long as there is internet.
 As you can imagine, this is very useful, hence why it is so popular.</p>
-</main>
-<div class="sidenav">
-<a class= "active" href="">What is Cloud Computing?</a>
+<div class="sidenav" style="margin-top: -20%;">
+<a class= "active" href="text.html">What is Cloud Computing?</a>
 <a href="How can you get it.html">How Can You Get It?</a>
 <a href="Uses.html">Uses</a>
 <a href="Pros.html">Pros</a>
 <a href="Cons.html">Cons</a>
 </div>
+</main>
 <div>
-<footer class="nav-down">
+<footer class="nav-down" style="margin-top: 2%; padding-bottom: 2%; bottom: -350px !important;">
 <h1>Contact Us</h1>
 <p>Raymond.moy@lps-students.org</p>
 </footer>
