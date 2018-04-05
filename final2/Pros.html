@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" 
 type = "text/css" 
-href = "css - Copy - Copy.css" />
+href = "/static/css.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
 <title>Zephyr - Pros</title>
 <style>
@@ -116,7 +116,7 @@ margin-top: 17% !important;
   }
 }
 html { 
- background: url("img_0630.jpg") no-repeat center center fixed;
+ background: url("/static/img_0630.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -163,15 +163,22 @@ margin-left: 20px;
 <body>
 <div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
 <a href="index - Copy.html">
-<img src= "unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
+<img src= "/static/unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
 </a>
 <a href="index - Copy.html" class= "active" style="width: 9%; margin-left: -3%;">Home</a>
 <a href="video.html" class= "button" width: 9%>Video</a>
 <a href="text.html" class= "button" width: 9%>Text</a>
 <a href="Cloud.html" class= "button" width: 9%>Cloud</a>
 <a class="button" style="float:right;" href= "about.html" width: 9%>About</a>
-<a href="login.html" class="button" width: 9%>Log In</a>
-<a href="register.html" class="button" width: 9%>Register</a>
+{% block content %}
+  {% if user.is_authenticated %}
+    Hello, {{user.username}}.
+    <li><a href="{% url 'users:logout' %}" class= "button" width: 9%>Log out</a></li>
+  {% else %}
+    <li><a href="{% url 'users:login' %}" class= "button" width: 9%>Log in</a></li>
+    <li><a href="{% url 'users:register' %}" class= "button" width: 9%>Register</a></li>
+  {% endif %}
+{% endblock content %
 <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-left: -1%;">&#9776;</a>
 </div>
 <script>
@@ -201,7 +208,7 @@ background-color: transparent; float: none; position: relative; width: auto;">
 <li style="float: none; display: list-item; width: auto; text-align: left; margin-top: -3%; height: auto;">Data is usually safe</li>
 </ul>
 </div>
-<img src="Capture.png" style="float: left; margin-top: 1%; margin-bottom: 1%; width: 50% !important; margin-left: 30%;">
+<img src="image6.png" style="float: left; margin-top: 1%; margin-bottom: 1%; width: 50% !important; margin-left: 30%;">
 <div class="sidenav" style="margin-top: -678px;">
 <a class= "active" href="text.html">What is Cloud Computing?</a>
 <a href="How can you get it.html">How Can You Get It?</a>
