@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" 
 type = "text/css" 
-href = "css - Copy - Copy.css" />
+href = "/static/css.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
 <title>Zephyr - Home</title>
 <style>
@@ -87,7 +87,7 @@ margin-top: 2%;
   }
 }
 html { 
- background: url("img_0630.jpg") no-repeat center center fixed;
+ background: url("/static/img_0630.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -109,15 +109,22 @@ z-index: 1;
 <body>
 <div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
 <a href="index - Copy.html">
-<img src= "unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
+<img src= "/static/unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
 </a>
 <a href="index - Copy.html" class= "active" style="width: 9%; margin-left: -3%;">Home</a>
 <a href="video.html" class= "button" width: 9%>Video</a>
 <a href="text.html" class= "button" width: 9%>Text</a>
 <a href="Cloud.html" class= "button" width: 9%>Cloud</a>
 <a class="button" style="float:right;" href= "about.html" width: 9%>About</a>
-<a href="login.html" class="button" width: 9%>Log In</a>
-<a href="register.html" class="button" width: 9%>Register</a>
+{% block content %}
+  {% if user.is_authenticated %}
+    Hello, {{user.username}}.
+    <li><a href="{% url 'users:logout' %}" class= "button" width: 9%>Log out</a></li>
+  {% else %}
+    <li><a href="{% url 'users:login' %}" class= "button" width: 9%>Log in</a></li>
+    <li><a href="{% url 'users:register' %}" class= "button" width: 9%>Register</a></li>
+  {% endif %}
+{% endblock content %
 <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-left: -1%;">&#9776;</a>
 </div>
 <script>
@@ -134,7 +141,7 @@ function myFunction() {
 <h1 style= "margin-left:12%; margin-top:15%; font-size: 49px; text-align: center;">Teach Yourself About the Cloud Here at Zephyr Computing.</h1>
 <h1 style= "margin-left:12%; margin-top:8%; font-size: 30px; text-align: center;">"Learn, Grow, Rise, and Store" -Zephyr Computing Team</h1>
 <div style="text-align: center;">
-<a href="register.html" class="button" style="position: absolute; background-color: transparent; padding: 3% 5% 3% 5%; font-size: 24px; border:solid; border-color: black; color: black; margin-left: -1%;">Sign Up</a>
+<a href="users/register.html" class="button" style="position: absolute; background-color: transparent; padding: 3% 5% 3% 5%; font-size: 24px; border:solid; border-color: black; color: black; margin-left: -1%;">Sign Up</a>
 </div>
 </main>
 <footer class="nav-down">
