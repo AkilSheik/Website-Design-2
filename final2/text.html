@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" 
 type = "text/css" 
-href = "css - Copy - Copy.css" />
+href = "/static/css.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
 <title>Zephyr - Text</title>
 <style>
@@ -113,7 +113,7 @@ font-size: 16px !important;
   }
 }
 html { 
- background: url("img_0630.jpg") no-repeat center center fixed;
+ background: url("/static/img_0630.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -162,15 +162,22 @@ margin-left: 20px;
 <body>
 <div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
 <a href="index - Copy.html">
-<img src= "unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
+<img src= "/static/unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
 </a>
 <a href="index - Copy.html" class= "active" style="width: 9%; margin-left: -3%;">Home</a>
 <a href="video.html" class= "button" width: 9%>Video</a>
 <a href="text.html" class= "button" width: 9%>Text</a>
 <a href="Cloud.html" class= "button" width: 9%>Cloud</a>
 <a class="button" style="float:right;" href= "about.html" width: 9%>About</a>
-<a href="login.html" class="button" width: 9%>Log In</a>
-<a href="register.html" class="button" width: 9%>Register</a>
+{% block content %}
+  {% if user.is_authenticated %}
+    Hello, {{user.username}}.
+    <li><a href="{% url 'users:logout' %}" class= "button" width: 9%>Log out</a></li>
+  {% else %}
+    <li><a href="{% url 'users:login' %}" class= "button" width: 9%>Log in</a></li>
+    <li><a href="{% url 'users:register' %}" class= "button" width: 9%>Register</a></li>
+  {% endif %}
+{% endblock content %}
 <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-left: -1%;">&#9776;</a>
 </div>
 <script>
@@ -186,9 +193,9 @@ function myFunction() {
 </div>
 <main style="position: absolute; width: 100%; min-height: 100%;">
 <h1 style= "margin-left:25%; margin-top:10%; font-size: 49px; text-decoration: underline;">What is Cloud Computing?</h1>
-<p style= "margin-left:25%; margin-top: 1%; font-size: 25px;">So chances are, you have probably heard people buzzing around about cloud computing. Cloud computing is going to be the future! Businesses are starting to use it! However, no one has actually told you what it meant. What is this raving about, you may ask. Well, according to the National Institute of Standards and Technology, ìcloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.î  In English, cloud computing is using another computer, usually a server, over the internet to store your data. This way, your data is not stuck onto one network or computer without an efficient way of transferring it. You get the benefit of it being on a remote server.
+<p style= "margin-left:25%; margin-top: 1%; font-size: 25px;">So chances are, you have probably heard people buzzing around about cloud computing. Cloud computing is going to be the future! Businesses are starting to use it! However, no one has actually told you what it meant. What is this raving about, you may ask. Well, according to the National Institute of Standards and Technology, ‚Äúcloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.‚Äù  In English, cloud computing is using another computer, usually a server, over the internet to store your data. This way, your data is not stuck onto one network or computer without an efficient way of transferring it. You get the benefit of it being on a remote server.
 
- Why is this a benefit? Because you can access you data or applications anywhere as long as there is internet. That is right, you can access work files from anywhere, from your home to a mountain to underwater, if you have internet access. With the cloud, gone are the days of lost productivity due to an inability to get a computer file. That is just one use! You will learn additional uses of the cloud in the cloud tab of this page. You might be thinking, well, that is neat, but why the name cloud? Well, the phrase was originally used to describe the internet in the 1960s, but it made its debut for its current meaning back in 2006, when Eric Schmidt, the CEO of Google at the time, used it describe a way of storing files. Now, it is a common phrase, and a sign of technologyís rapid advancement.
+ Why is this a benefit? Because you can access you data or applications anywhere as long as there is internet. That is right, you can access work files from anywhere, from your home to a mountain to underwater, if you have internet access. With the cloud, gone are the days of lost productivity due to an inability to get a computer file. That is just one use! You will learn additional uses of the cloud in the cloud tab of this page. You might be thinking, well, that is neat, but why the name cloud? Well, the phrase was originally used to describe the internet in the 1960s, but it made its debut for its current meaning back in 2006, when Eric Schmidt, the CEO of Google at the time, used it describe a way of storing files. Now, it is a common phrase, and a sign of technology‚Äôs rapid advancement.
 </p>
 <div style="margin-top: 1%; position: relative;">
 <h1 style="margin-left: 25%; font-size: 49px;">
@@ -200,14 +207,14 @@ background-color: transparent; float: none; position: relative; width: auto;">
 <li style="float: none; display: list-item; width: auto; text-align: left; margin-top: -3%; height: auto;">The cloud allows you data to not be stuck on one server, and allows for easy access over the internet</li>
 </ul>
 </div>
-<img src="network-1911678_1920.png" style="float: left; margin-top: 1%; margin-bottom: 1%; width: 50% !important; margin-left: 30%;">
+<img src="image13.png" style="float: left; margin-top: 1%; margin-bottom: 1%; width: 50% !important; margin-left: 30%;">
 <div style="margin-top: 5%; max-width: 360px; font-size: 15px; margin-left: 30%; position: relative;">
-<p>ìFree Image on Pixabay - Network, Social, Social Networks.î <i>Network Social Networks ∑ Free Image on Pixabay,</i> 17 Dec. 2016, pixabay.com/en/network-social-social-networks-1911678/.
+<p>‚ÄúFree Image on Pixabay - Network, Social, Social Networks.‚Äù <i>Network Social Networks ¬∑ Free Image on Pixabay,</i> 17 Dec. 2016, pixabay.com/en/network-social-social-networks-1911678/.
 </p>
 </div>
 <div class="sidenav" style="margin-top: -1400px; position: absolute;">
 <a class= "active" href="text.html">What is Cloud Computing?</a>
-<a href="How can you get it.html">How Can You Get It?</a>
+<a href="howcanyougetit">How Can You Get It?</a>
 <a href="Uses.html">Uses</a>
 <a href="Pros.html">Pros</a>
 <a href="Cons.html">Cons</a>
