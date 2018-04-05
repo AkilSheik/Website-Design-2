@@ -1,0 +1,48 @@
+{% block content %}
+
+
+
+  <form method="post" action="{% url 'users:register' %}">
+ 
+   {% csrf_token %}
+   
+   {{ form.as_p }}
+
+    
+<button name="submit">register</button>
+    
+<input type="hidden" name="next" value="{% url 'Website_Design:index' %}" />
+  
+</form>
+
+
+{% endblock content %}
+ 
+
+<style>
+
+img {
+    
+max-width: 100%;
+
+}
+
+
+body {
+
+background-image: url("/static/img_0630.jpg/");
+
+background-size: cover;
+
+background-repeat: no-repeat;
+
+background-position: center center;
+
+margin-top: 35%;
+
+overflow-x: hidden;
+
+}
+
+</style>
+
