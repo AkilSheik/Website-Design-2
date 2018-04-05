@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" 
 type = "text/css" 
-href = "css - Copy - Copy.css" />
+href = "/static/css.css" />
 <meta name="viewport" content="width=device-width, initial-scale=0.75">
 <title>Zephyr - Uses</title>
 <style>
@@ -116,7 +116,7 @@ margin-top: 17% !important;
   }
 }
 html { 
- background: url("img_0630.jpg") no-repeat center center fixed;
+ background: url("/static/img_0630.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -164,15 +164,22 @@ margin-left: 20px;
 <body>
 <div class="topnav" id="myTopnav" style="z-index: 100; width: 101%; margin-left: -1%;">
 <a href="index - Copy.html">
-<img src= "unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
+<img src= "/static/unnamed.png" style="float:left; width: 57%; height: 57%; margin-left: 2%; margin-top: -25%; padding-bottom: 1px !important;">
 </a>
 <a href="index - Copy.html" class= "active" style="width: 9%; margin-left: -3%;">Home</a>
 <a href="video.html" class= "button" width: 9%>Video</a>
 <a href="text.html" class= "button" width: 9%>Text</a>
 <a href="Cloud.html" class= "button" width: 9%>Cloud</a>
 <a class="button" style="float:right;" href= "about.html" width: 9%>About</a>
-<a href="login.html" class="button" width: 9%>Log In</a>
-<a href="register.html" class="button" width: 9%>Register</a>
+{% block content %}
+  {% if user.is_authenticated %}
+    Hello, {{user.username}}.
+    <a href="{% url 'users:logout' %}" class= "button" width: 9%>Log out</a>
+  {% else %}
+    <a href="{% url 'users:login' %}" class= "button" width: 9%>Log in</a>
+    <a href="{% url 'users:register' %}" class= "button" width: 9%>Register</a>
+  {% endif %}
+{% endblock content %
 <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="margin-left: -1%;">&#9776;</a>
 </div>
 <script>
@@ -188,7 +195,7 @@ function myFunction() {
 </div>
 <main style="position: absolute; width: 100%; height: 100%;">
 <h1 style= "margin-left:25%; margin-top:10%; font-size: 49px; text-decoration: underline;">Uses</h1>
-<p style= "margin-left:25%; margin-top: 1%; font-size: 25px;">The cloud is a powerful tool, that could be used for many purposes, even though its primary use would be to store data. Some of the more obvious uses would be to store important files for safety, create backups in case of a hardware failure on a local server, saving space, and editing files on the go. The last one is a particularly handy use, since it  allows for more productivity, and is a selling point for most providers. Wouldnít it be nice if you work work on something anywhere? The cloud isnít just for enterprises however. You could use it for personal things also, like photo storage, computer backups, NAS backups, document editing, and many other things. Another use of the cloud that is starting to grow in the personal market, is cloud gaming. You probably have heard of it, one provider of it is Nvidia, a graphics card company, and they named it Geforce Now. It is really just using another computer over the internet with good computer hardware, to play video games. Can you find any more creative uses for it?
+<p style= "margin-left:25%; margin-top: 1%; font-size: 25px;">The cloud is a powerful tool, that could be used for many purposes, even though its primary use would be to store data. Some of the more obvious uses would be to store important files for safety, create backups in case of a hardware failure on a local server, saving space, and editing files on the go. The last one is a particularly handy use, since it  allows for more productivity, and is a selling point for most providers. Wouldn‚Äôt it be nice if you work work on something anywhere? The cloud isn‚Äôt just for enterprises however. You could use it for personal things also, like photo storage, computer backups, NAS backups, document editing, and many other things. Another use of the cloud that is starting to grow in the personal market, is cloud gaming. You probably have heard of it, one provider of it is Nvidia, a graphics card company, and they named it Geforce Now. It is really just using another computer over the internet with good computer hardware, to play video games. Can you find any more creative uses for it?
 </p>
 <div style="margin-top: 1%; position: relative;">
 <h1 style="margin-left: 25%; font-size: 49px;">
@@ -205,12 +212,12 @@ background-color: transparent; float: none; position: relative; width: auto;">
 </div>
 <img src="Bimetrical_icon_folder.svg" style="float: left; margin-top: 1%; margin-bottom: 1%; width: 27% !important; margin-left: 40%;">
 <div style="margin-top: 9%; max-width: 360px; font-size: 15px; margin-left: 40%; position: relative;">
-<p>Atero, J. Xavier. ìFile:Bimetrical Icon Folder.svg.î <i>File:Bimetrical Icon Folder.svg - Wikimedia Commons,</i> 4 May 2017, commons.wikimedia.org/wiki/File:Bimetrical_icon_folder.svg.
+<p>Atero, J. Xavier. ‚ÄúFile:Bimetrical Icon Folder.svg.‚Äù <i>File:Bimetrical Icon Folder.svg - Wikimedia Commons,</i> 4 May 2017, commons.wikimedia.org/wiki/File:Bimetrical_icon_folder.svg.
 </p>
 </div>
 <div class="sidenav" style="margin-top: -20%; margin-top: -1305px; position: absolute;">
 <a class= "active" href="text.html">What is Cloud Computing?</a>
-<a href="How can you get it.html">How Can You Get It?</a>
+<a href="howcanyougetit.html">How Can You Get It?</a>
 <a href="Uses.html">Uses</a>
 <a href="Pros.html">Pros</a>
 <a href="Cons.html">Cons</a>
